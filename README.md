@@ -151,6 +151,6 @@ Compare that to a slot that is only one intersection away from the current slot.
 And so, although my changes do not eliminate dead-end words entirely, they do significantly reduce their prevalence, resulting in a much better user experience.
 
 
-## The end
+## Acknowledgements
 
 I give my thanks to [Jonathan Blandford](https://gitlab.gnome.org/jrb/) for his invaluable mentorship and clear communication throughout the past six months. And I thank the GNOME Foundation for its participation in GSoC and commitment to open source.
