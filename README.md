@@ -84,13 +84,13 @@ I also performed a competitive analysis of other crossword editors on the market
 
 ## Word suggestion algorithm improvements
 
-The goal of any crossword editor software is to make it as easy as possible to create a good crossword puzzle. To that end, all crossword editors provide a [*word suggestion list*](https://gitlab.gnome.org/jrb/crosswords/-/raw/master/data/images/edit-grid.png)---a list of words that fit the current slot. This feature helps the user find words that fit the slots on their grid.
+The goal of any crossword editor software is to make it as easy as possible to create a good crossword puzzle. To that end, all crossword editors provide a [*word suggestion list*](https://gitlab.gnome.org/jrb/crosswords/-/raw/master/data/images/edit-grid.png)—a list of words that fit the current slot. This feature helps the user find words that fit the slots on their grid.
 
 In order to generate the word suggestion list, crossword editors use a *word suggestion algorithm*. The simplest example of a word suggestion algorithm considers two constraints:
 * The size of the current slot.
 * The letters in the current slot.
 
-So for example, if the current slot is `C A _ S`, then this basic word suggestion algorithm would return all four-letter words that start with *CA* and end in *S*---such as *CATS* or *CABS*, but not *COTS*.
+So for example, if the current slot is `C A _ S`, then this basic word suggestion algorithm would return all four-letter words that start with *CA* and end in *S*—such as *CATS* or *CABS*, but not *COTS*.
 
 ### The problem
 
@@ -114,7 +114,7 @@ that means that 4-Across must be *WORO*. But *WORO* is not a word. So, 4-Down
 and 4-Across are both unfillable, because no letter fits in the bottom-right
 cell. This means that there are no valid word suggestions for either 4-Across or 4-Down.
 
-Now, suppose that the current slot is 4-Across. The basic algorithm only considers the constraints imposed by the current slot, and so it returns all words that match the pattern `W O R _`---such as *WORD* and *WORM*. But none of these word suggestions actually fit in the slot---they all cause 4-Down to become some nonsensical word.
+Now, suppose that the current slot is 4-Across. The basic algorithm only considers the constraints imposed by the current slot, and so it returns all words that match the pattern `W O R _`—such as *WORD* and *WORM*. But none of these word suggestions actually fit in the slot—they all cause 4-Down to become some nonsensical word.
 
 The problem is that the basic algorithm only looks at the current clue, 4-Across. It does not also look at other slots, like 4-Down. Because of that, the algorithm doesn't realize that 4-Down causes 4-Across to be unfillable. And so, the algorithm generates incorrect word suggestions.
 
@@ -130,7 +130,7 @@ This means that our algorithm could actually handle the problematic grid properl
 
 ### Consequences
 
-All this means that our word suggestion algorithm was prone to generating *dead-end words*---words that seem to fit a slot, but that actually lead to an unfillable grid.
+All this means that our word suggestion algorithm was prone to generating *dead-end words*—words that seem to fit a slot, but that actually lead to an unfillable grid.
 
 In the problematic grid example I gave, this unfillability is immediately obvious. The user fills 4-Across with a word like *WORM*, and they instantly see that this turns 4-Down into *ZERM*, a nonsense word. That makes this grid not so bad.
 
@@ -142,7 +142,7 @@ To fix this problem, I re-implemented our word suggestion algorithm to account f
 
 ![Fixed behaviour](https://victorma.ca/posts/gsoc-6/fixed.png)
 
-Our new algorithm doesn't eliminate dead-end words entirely. After all, it only checks the intersecting slots of the current slot---it does not also check the intersecting slots of the intersecting slots, etc.
+Our new algorithm doesn't eliminate dead-end words entirely. After all, it only checks the intersecting slots of the current slot—it does not also check the intersecting slots of the intersecting slots, etc.
 
 However, the constraints imposed by a slot onto the current slot become weaker, the more intersections-removed it is. Consider: in order for a slot that's two intersections away from the current slot to constrain the current slot, it must first constrain a mutual slot (a slot that intersects both of them) enough for that mutual slot to then constrain the current slot.
 
