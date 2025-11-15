@@ -33,28 +33,34 @@ Other merge requests:
 
 ### Design documents
 
-[Work in progress.](https://gitlab.gnome.org/jrb/crosswords/-/merge_requests/338)
+* [Word suggestion algorithm](https://jrb.pages.gitlab.gnome.org/crosswords/devel-docs/designs/crosswords-editor/word-suggestion.html)
+* [Intersection-based word suggestion algorithm
+](https://jrb.pages.gitlab.gnome.org/crosswords/devel-docs/designs/crosswords-editor/intersection-algorithm.html)
+* [Forward-checking word suggestion algorithm
+](https://jrb.pages.gitlab.gnome.org/crosswords/devel-docs/designs/crosswords-editor/forward-checking.html)
+* [AC-3-based word suggestion algorithm](https://jrb.pages.gitlab.gnome.org/crosswords/devel-docs/designs/crosswords-editor/ac3.html)
+* [Grid helpers](https://jrb.pages.gitlab.gnome.org/crosswords/devel-docs/designs/crosswords-editor/grid-helpers.html)
 
 ### Other documents
 
 Development:
-* **[Ideas list](https://gitlab.gnome.org/jrb/crosswords/-/wikis/ideas)**
-* **[Editor roadmap thoughts](https://gitlab.gnome.org/jrb/crosswords/-/wikis/editor-roadmap)**
-* **[Crossword Editor architecture notes](https://gitlab.gnome.org/jrb/crosswords/-/wikis/guadec-notes)**
-* **[Naming problems](https://gitlab.gnome.org/jrb/crosswords/-/wikis/naming-problems)**
-* **[Font testing](https://gitlab.gnome.org/jrb/crosswords/-/wikis/font-testing)**
+* [Ideas list](https://gitlab.gnome.org/jrb/crosswords/-/wikis/ideas)
+* [Editor roadmap thoughts](https://gitlab.gnome.org/jrb/crosswords/-/wikis/editor-roadmap)
+* [Crossword Editor architecture notes](https://gitlab.gnome.org/jrb/crosswords/-/wikis/guadec-notes)
+* [Naming problems](https://gitlab.gnome.org/jrb/crosswords/-/wikis/naming-problems)
+* [Font testing](https://gitlab.gnome.org/jrb/crosswords/-/wikis/font-testing)
 
 Word suggestion algorithm:
-* **[CSP notes](https://gitlab.gnome.org/jrb/crosswords/-/wikis/csp-notes)**
-* **[Miscellaneous papers](https://gitlab.gnome.org/jrb/crosswords/-/wikis/papers)**
-* **[Sub-alphabet idea](https://gitlab.gnome.org/jrb/crosswords/-/wikis/sub-alphabet)**
+* [CSP notes](https://gitlab.gnome.org/jrb/crosswords/-/wikis/csp-notes)
+* [Miscellaneous papers](https://gitlab.gnome.org/jrb/crosswords/-/wikis/papers)
+* [Sub-alphabet idea](https://gitlab.gnome.org/jrb/crosswords/-/wikis/sub-alphabet)
 
 Competitive analysis:
-* **[Survey of existing crossword editors](https://gitlab.gnome.org/jrb/crosswords/-/wikis/survey-editors)**
-* **[Survey of printing feature in existing editors](https://gitlab.gnome.org/jrb/crosswords/-/wikis/survey-printing)**
+* [Survey of existing crossword editors](https://gitlab.gnome.org/jrb/crosswords/-/wikis/survey-editors)
+* [Survey of printing feature in existing editors](https://gitlab.gnome.org/jrb/crosswords/-/wikis/survey-printing)
 
 Other:
-* **[Review of docs](https://gitlab.gnome.org/jrb/crosswords/-/wikis/docs-review)**
+* [Review of docs](https://gitlab.gnome.org/jrb/crosswords/-/wikis/docs-review)
 
 ### Blog posts
 
